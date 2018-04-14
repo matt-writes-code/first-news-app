@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />     <!-- use Leaflet Javascript library to create map -->
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    </head>
+    <body>
+        <div id="map" style="width:100%; height:300px;"></div>
+        <h2>
+            Beloved Matthew D. Haines who was a 32 year old White male died in a homicide.
+        </h2>
+        <h3>Date of incident: 1992-04-30</h3>
+        <h3>Location        : Lemon Avenue &amp; Pacific Coast Highway in Long Beach</h3>
+        <script type="text/javascript">
+            var map = L.map('map').setView([33.7898575, -118.1785114], 16);
+            var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom:18,
+                attribution: 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
+            });
+            map.addLayer(osmLayer);
+            var marker = L.marker([33.7898575, -118.1785114]).addTo(map);
+        </script>
+    </body>
+</html>
